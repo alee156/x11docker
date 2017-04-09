@@ -6,26 +6,14 @@
 # Type 'x11docker --help' or scroll down to read usage information.
 # https://github.com/mviereck/x11docker
 
-Version="2.4.3"
+Version="2.5.0"
 
 changelog() {
-# ToDo:
-# - check xpra 0.17+1.0 : BUG seems to not disable clipboard on --no-clipboard
-# - split docker-run in xtermrc for su/sudo/nopwd?
-# - change --xsocket to only share X socket, dismiss --tcpxsocket
-# - edge case BUG: --virtualgl with *-image and as root in container fails to remove X0 in $sharefolder/socket. cache folder must be removed by root afterwards.
-# - minor BUG: --tcp: $Tcpdisplay does not work in *-image, would need ip from /etc/hosts instead
-# - expand timetosaygoodbye to work in all usecases. Missing: CMD from image
-# - improve verbose output
-# - --xpra/--xpra-image: check --mmap, check further options
-# - develop new options --xpra-proxy or --xorg-proxy ?
-# - test --gpu and --virtualgl with different setups of graphics cards and drivers. 
-# - check pulseaudio: daemon on host seems to quit when image terminates. As a workaround, tcp module is not disabled on exit for now
-# - check whether VT is not in use with --xorg
-# - kaptain sometimes sleeps a while until command is created. no cpu usage. why?
-# - try to integrate --alsa Alsa sound
 
 # x11docker changelog
+# 07.04.2017 V2.5.0   Stable release.
+#                     Last version including options --xpra-image --xorg-image --xdummy-iage
+#                     Future development: Wayland support
 # 29.03.2017 V2.4.4   bugfix xpra #1469: resizing windows left unrefreshred rectangles
 # 25.03.2017 V2.4.3   bugfix/typo $Bgidfile in finish() 
 #                     slight adjustments in WM range
